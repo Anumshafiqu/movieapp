@@ -1,0 +1,65 @@
+<!-- <div class="movie-list">
+    <h2>Popular Movies</h2>
+    <div class="movie" *ngFor="let movie of movies">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}" />
+      <h3>{{ movie.title }}</h3>
+    </div>
+  </div> -->
+
+  <!-- <div class="container mt-5">
+    <h2 class="text-center">Movie Search</h2>
+    <div class="form-group">
+      <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search for a movie">
+      <button class="btn btn-primary mt-3" (click)="searchMovies()">Search</button>
+    </div>
+  
+    <div class="row mt-4" *ngIf="movies.length">
+      <div class="col-md-4 mb-4" *ngFor="let movie of movies">
+        <div class="card">
+          <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" class="card-img-top" alt="{{ movie.title }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ movie.title }}</h5>
+             <p class="card-text">{{ movie.overview }}</p> -->
+          <!-- </div>
+        </div>
+      </div>
+    </div>
+  </div>  -->
+
+
+
+
+
+
+
+
+
+  <div class="container mt-5">
+    <h2 class="text-center">Movie Search</h2>
+    <div class="form-group">
+      <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search for a movie">
+      <button class="btn btn-primary mt-3" (click)="searchMovies()">Search</button>
+    </div>
+  
+    <div class="row mt-4" *ngIf="movies.length">
+      <div class="col-md-4 mb-4" *ngFor="let movie of movies">
+        <div class="card">
+          <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" class="card-img-top" alt="{{ movie.title }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            <button class="btn btn-info" (click)="viewMovieDetails(movie.id)">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="selectedMovie" class="mt-4">
+      <h3>{{ selectedMovie.title }}</h3>
+      <img [src]="'https://image.tmdb.org/t/p/w500/' + selectedMovie.poster_path" class="img-fluid" alt="{{ selectedMovie.title }}">
+      <p><strong>Overview:</strong> {{ selectedMovie.overview }}</p>
+      <p><strong>Release Date:</strong> {{ selectedMovie.release_date }}</p>
+      <p><strong>Rating:</strong> {{ selectedMovie.vote_average }}</p>
+    </div>
+  </div>
+  
+  
