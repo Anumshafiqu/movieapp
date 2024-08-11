@@ -14,6 +14,7 @@ import { MoiveappComponent } from './moiveapp/moiveapp.component';
 import { MovieAppComponent } from './movie-app/movie-app.component';
 import { SearchcomponentComponent } from './searchcomponent/searchcomponent.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { PopularmovieComponent } from './popularmovie/popularmovie.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
     MoiveappComponent,
     MovieAppComponent,
     SearchcomponentComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    PopularmovieComponent
   ],
   imports: [
     BrowserModule,

@@ -12,12 +12,19 @@ export class MovieDetailComponent {
 
   constructor(private movieappService: MovieAppService, private route: ActivatedRoute) {}
 
-  ngOnInit() {
+  // ngOnInit() {
+  //   const id = this.route.snapshot.paramMap.get('id');
+  //   if (id) {
+  //     this.movieappService.getMovieDetails(+id).subscribe((data) => {
+  //       this.movie = data;
+  //     });
+  //   }
+  // }
+
+  ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.movieappService.getMovieDetails(+id).subscribe((data) => {
-        this.movie = data;
-      });
-    }
+    this.movieappService.getMovieDetails(id!).subscribe((data) => {
+      this.movie = data;
+    });
   }
 }

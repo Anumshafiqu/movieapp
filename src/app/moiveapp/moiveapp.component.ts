@@ -36,11 +36,11 @@ export class MoiveappComponent {
     }
   }
 
-  viewMovieDetails(id: number) {
-    this.movieappService.getMovieDetails(id).subscribe((data) => {
-      this.selectedMovie = data;
-    });
-  }
+  // viewMovieDetails(id: number) {
+  //   this.movieappService.getMovieDetails(id).subscribe((data) => {
+  //     this.selectedMovie = data;
+  //   });
+  // }
 
 
   }
