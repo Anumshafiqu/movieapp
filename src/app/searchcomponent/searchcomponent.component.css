@@ -45,4 +45,10 @@
     border-radius: 30px;
     border: none;
   }
+  .card{
+    width: 300px;
+  }
+  .card-img-top{
+    height: 400px;
+  }
   
